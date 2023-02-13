@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+
+    xml parseFloat(`xml`)
+    API
+    fetch("https://restcountries.com/v3.1/all")
+    .then((response)=>console.log(response))
+    .catch(err=>console.log(err));
+    
+    .then((response)=>response.json())
+    .then((data)=>console.log(data))
+    .catch((err)=>console.log(err.message))
+    
+    .fetch("https://restcountries.com/v3.1/all")
+    .then(response=>response.json())
+    .then((data)=>{
+    console.log(data);
+    data.forEach(element=>{
+        const countryRequired={
+            ...element,
+            name:element.name.common,
+            flag:element.flags.png,
+            population:element.population,
+            region:element.region,
+            captial:element.captial
+        }
+        createcountry((err)=>console.log(err));
+    
+    });
+    })
+    .catch((err)=>console.log(err));
+    functionCreateCountry({name,flag,population,region,captial}){
+    document.body.innerHTML+=`
+    `
+    
+    }
+
+    <div>
+        <h1>country name:${name}</h1>
+        <p>${flag}</p>
+        <p>${population}</p>
+        <p>${region}</p>
+        <p>${capital}</p>
+        </div>
+        `
+        }
+
+    
+
+    
+   
+<div class="container">
+    <img src="${flag}"alt="${name}"class="flag"/>
+    <div class="info">
+        <h2>${name}</h2>
+        <p><span>population:</span>${population}</p>
+        <p><span>region</span>${region}</p>
+        <p><span>capital</span>${capital}</p>
+    </div>
+</div>
+`
+}
+</body>
+</html>
